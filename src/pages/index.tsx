@@ -16,8 +16,6 @@ export default function Home() {
     async function getPokemon() {
       const response = await fetch(`${urlApi}${url}`);
       const data = await response.json();
-      const filterCategorys = data.map((pokemon: any) => pokemon.category);
-      localStorage.setItem("listCategorys", JSON.stringify(filterCategorys));
       setLengthList(data.length - 1);
       setPokemon(data[index]);
     }
@@ -31,6 +29,7 @@ export default function Home() {
 
   function handleSearch(event: any) {
     const inputValue = event.target.value;
+    setIndex(0);
     setName(inputValue);
     setUrl(`?name=${inputValue}`);
   }

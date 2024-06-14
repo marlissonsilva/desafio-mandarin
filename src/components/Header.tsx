@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import NavLink from "./NavLink";
 
 interface HeaderProps {}
 
@@ -13,20 +14,10 @@ export default function Header(props: HeaderProps) {
         <h1 className="text-5xl font-semibold text-center">Desafio Mandarin</h1>
         <nav className="flex gap-5 list-none">
           <li>
-            <Link
-              href={"/"}
-              className={`uppercase px-6 py-3 rounded-md bg-white hover:bg-blue-300 text-black`}
-            >
-              Aleatório
-            </Link>
+            <NavLink url="/" text=" Aleatório" />
           </li>
           <li>
-            <Link
-              href={"/Dashboard"}
-              className={`uppercase px-6 py-3 rounded-md bg-white hover:bg-blue-300 text-black`}
-            >
-              Ver todos
-            </Link>
+            <NavLink url="/Dashboard" text="Ver todos" />
           </li>
         </nav>
       </header>
