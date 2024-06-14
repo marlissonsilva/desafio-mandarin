@@ -32,7 +32,7 @@ export default function Dashboard() {
         <div className="container m-auto flex flex-col items-center">
             <Input name={name} search={handleSearch}/>
           {pokemons.length ? (
-            <div className="flex justify-center flex-wrap gap-5 items-center pt-10">
+            <div className="flex justify-center flex-wrap gap-5 items-center pt-10 px-4">
               {pokemons.map((pokemon, index) => (
                 <Card key={index} data={pokemon} />
               ))}

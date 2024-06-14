@@ -39,7 +39,7 @@ export default function Home() {
     <>
       <Header />
       <main className="bg-zinc-800 h-screen w-full pt-10">
-        <div className="container m-auto flex flex-col justify-center items-center ">
+        <div className="container m-auto flex flex-col justify-center items-center px-4">
           <Input name={name} search={handleSearch} />
           <button
             onClick={handleRequest}

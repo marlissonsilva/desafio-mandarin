@@ -33,7 +33,7 @@ export default function Card(props: CardProps) {
           width={400}
           height={400}
           alt={name ? name : "???????"}
-          className="rounded-md"
+          className="rounded-tr-md rounded-tl-md"
         />
         <Image
           src={image_url ? image_url : "/who_pokemon.0.jpg"}
